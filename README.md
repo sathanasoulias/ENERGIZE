@@ -225,6 +225,10 @@ tensorboard --logdir outputs/tcn_boiler/tensorboard
 This project has received funding from the European Union's Horizon Europe programme **dAIEDGE** under grant agreement No. **101120726**. The work was carried out within the **ENERGIZE** project (sub-grant agreement dAI1OC1).
 
 <p align="center">
+  <img src="docs/daiedge_logo.png" alt="dAIEDGE Logo" width="200"/>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Funded%20by-European%20Union%20Horizon%20Europe-003399?logo=eu" alt="Funded by EU Horizon Europe"/>
 </p>
 
