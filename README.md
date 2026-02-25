@@ -1,7 +1,7 @@
 # ENERGIZE NILM
 
 <p align="center">
-  <img src="docs/energise_banner.png" alt="ENERGIZE Project Banner" width="250"/>
+  <img src="docs/energise_banner.png" alt="ENERGIZE Project Banner" width="350"/>
 </p>
 
 <p align="center">
