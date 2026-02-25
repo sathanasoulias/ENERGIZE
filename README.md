@@ -79,10 +79,11 @@ ENERGIZE-NILM/
 ├── outputs/                         # Checkpoints, TensorBoard logs, metrics
 │
 ├── notebooks/
-│   └── 01_data_prep_training.ipynb  # Interactive training notebook (Colab-ready)
+│   ├── 01_data_prep_training.ipynb  # Data preparation & training walkthrough (Colab-ready)
+│   └── 02_evaluation.ipynb          # Model evaluation, metrics & visualisations (Colab-ready)
 │
 └── docs/
-    └── energise_banner.png          # Project banner (place your image here)
+    └── energise_banner.png          # Project banner
 ```
 
 ---
@@ -143,9 +144,14 @@ python main.py --eval-only --checkpoint outputs/tcn_boiler/checkpoint/model.pt
 
 Results are written to `outputs/<model>_<appliance>/metrics/`.
 
-### Step 3 — Interactive notebook
+### Step 3 — Interactive notebooks
 
-Open `notebooks/01_data_prep_training.ipynb` for a guided walkthrough including data visualisation and live training curves. Compatible with **Google Colab** — follow the setup cell at the top.
+Two Jupyter notebooks are provided for a fully guided workflow. Both are compatible with **Google Colab** — follow the setup cell at the top of each notebook.
+
+| Notebook | Purpose |
+|----------|---------|
+| `notebooks/01_data_prep_training.ipynb` | Data preparation, normalisation, model training, and live training curves |
+| `notebooks/02_evaluation.ipynb` | Load a trained checkpoint, run inference, compute metrics (MAE, F1, Precision, Recall, Accuracy, Energy Error), and generate visualisations (time-series comparison, confusion matrix, error distributions, rolling MAE, model comparison) |
 
 ---
 
@@ -214,15 +220,13 @@ tensorboard --logdir outputs/tcn_boiler/tensorboard
 
 ---
 
-## Adding the Project Banner
+## Funding
 
-Place your ENERGIZE project banner image at:
+This project has received funding from the European Union's Horizon Europe programme **dAIEDGE** under grant agreement No. **101120726**. The work was carried out within the **ENERGIZE** project (sub-grant agreement dAI1OC1).
 
-```
-docs/energise_banner.png
-```
-
-Any `.png` or `.jpg` with a roughly 3:1 aspect ratio (e.g., 1200 × 400 px) works well.
+<p align="center">
+  <img src="https://img.shields.io/badge/Funded%20by-European%20Union%20Horizon%20Europe-003399?logo=eu" alt="Funded by EU Horizon Europe"/>
+</p>
 
 ---
 
