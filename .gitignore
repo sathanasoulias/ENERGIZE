@@ -2,6 +2,7 @@
 # Data — raw and processed dataset files (download separately from PLEGMA)
 # =============================================================================
 data/PlegmaDataset_Clean/
+data/CLEAN_REFIT_081116/
 data/processed/
 
 # Keep the data scripts and parsers
