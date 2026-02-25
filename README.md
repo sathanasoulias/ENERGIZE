@@ -20,12 +20,11 @@
 
 **ENERGIZE NILM** is the baseline deep learning code for appliance-level energy disaggregation developed within the **ENERGIZE** project. Given a single whole-home power signal from the **PLEGMA** dataset, the models learn to estimate the individual power consumption of target appliances — without any additional hardware sensors.
 
-Three PyTorch architectures are provided:
+Two PyTorch architectures are provided:
 
 | Model | Architecture | Strategy | Input Window |
 |-------|-------------|----------|-------------|
 | **CNN** | 1-D Convolutional Network | Seq2Point | 299 samples |
-| **GRU** | Gated Recurrent Unit | Seq2Point | 199 samples |
 | **TCN** | Temporal Convolutional Network | Seq2Seq | 600 samples |
 
 ---
@@ -41,7 +40,6 @@ The **PLEGMA** dataset is a Greek residential smart meter dataset recorded at **
 | `boiler` | 50 W | 5000 W |
 | `ac_1` | 50 W | 2300 W |
 | `washing_machine` | 50 W | 2600 W |
-| `fridge` | 50 W | 400 W |
 
 **House splits** — models are evaluated on fully unseen houses:
 
@@ -162,8 +160,8 @@ Only three values need to be set per experiment:
 
 ```python
 DATASET_NAME   = 'plegma'
-APPLIANCE_NAME = 'boiler'   # boiler | ac_1 | washing_machine | fridge
-MODEL_NAME     = 'tcn'      # cnn | gru | tcn
+APPLIANCE_NAME = 'boiler'   # boiler | ac_1 | washing_machine
+MODEL_NAME     = 'tcn'      # cnn | tcn
 ```
 
 **Key training parameters**
@@ -173,8 +171,6 @@ MODEL_NAME     = 'tcn'      # cnn | gru | tcn
 | Epochs | 100 | Maximum training epochs |
 | Learning rate | 0.001 | Adam initial learning rate |
 | Early stopping patience | 6 | Epochs without improvement before stopping |
-| TCN depth | 9 | Number of dilated conv blocks |
-| TCN filters | [512, 256, …, 512] | Filters per block |
 
 ---
 
@@ -221,16 +217,14 @@ tensorboard --logdir outputs/tcn_boiler/tensorboard
 ---
 
 ## Funding
-
-This project has received funding from the European Union's Horizon Europe programme **dAIEDGE** under grant agreement No. **101120726**. The work was carried out within the **ENERGIZE** project (sub-grant agreement dAI1OC1).
-
 <p align="center">
   <img src="docs/daiedge_logo.png" alt="dAIEDGE Logo" width="200"/>
 </p>
-
 <p align="center">
-  <img src="https://img.shields.io/badge/Funded%20by-European%20Union%20Horizon%20Europe-003399?logo=eu" alt="Funded by EU Horizon Europe"/>
-</p>
+
+This project has received funding from the European Union's Horizon Europe programme **dAIEDGE** under grant agreement No. **101120726**. The work was carried out within the **ENERGIZE** project (sub-grant agreement dAI1OC1).
+
+
 
 ---
 
