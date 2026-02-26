@@ -1,7 +1,7 @@
 """
-OpenNILM — Main Training and Evaluation Script
+ENERGIZE — Main Training and Evaluation Script
 ================================================
-ENERGISE Project | DNN-based NILM Model Training
+ENERGIZE Project | DNN-based NILM Model Training
 
 Runs the full pipeline:
   1. Load processed data (CSV files produced by data/data.py)

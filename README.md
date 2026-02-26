@@ -81,7 +81,7 @@ ENERGIZE-NILM/
 │   └── 02_evaluation.ipynb          # Model evaluation, metrics & visualisations (Colab-ready)
 │
 └── docs/
-    └── energise_banner.png          # Project banner
+    
 ```
 
 ---
@@ -236,7 +236,7 @@ If you use this code in your research, please cite the ENERGIZE project:
 @misc{energize-nilm,
   title  = {ENERGIZE NILM: DNN-based Non-Intrusive Load Monitoring},
   year   = {2024},
-  url    = {https://github.com/your-org/energize-nilm}
+  url    = {https://github.com/sathanasoulias/ENERGIZE}
 }
 ```
 
