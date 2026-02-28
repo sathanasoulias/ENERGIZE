@@ -31,6 +31,15 @@ from .utils import (
     save_checkpoint,
     load_checkpoint
 )
+from .pruner import (
+    count_ops_and_params,
+    count_parameters_per_layer,
+    get_model_stats,
+    apply_torch_pruning,
+    run_predictions,
+    compute_metrics,
+    evaluate_model,
+)
 
 __version__ = '1.0.0'
 __all__ = [
@@ -78,4 +87,13 @@ __all__ = [
     'print_model_summary',
     'save_checkpoint',
     'load_checkpoint',
+
+    # Pruning
+    'count_ops_and_params',
+    'count_parameters_per_layer',
+    'get_model_stats',
+    'apply_torch_pruning',
+    'run_predictions',
+    'compute_metrics',
+    'evaluate_model',
 ]

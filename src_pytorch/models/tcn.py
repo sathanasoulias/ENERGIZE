@@ -124,7 +124,7 @@ class TCN_NILM(nn.Module):
         self.nb_filters = nb_filters
 
         # Initial 1x1 convolution for feature mixing
-        self.initial_conv = nn.Conv1d(1, nb_filters[0], kernel_size=1, padding='same')
+        self.initial_conv = nn.Conv1d(1, nb_filters[0], kernel_size=1, padding=0)
 
         # Create gated blocks for each stack and depth
         self.gated_blocks = nn.ModuleList()
